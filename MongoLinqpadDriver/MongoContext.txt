@@ -1,0 +1,20 @@
+using System.Linq;
+using MongoUtils;
+using MongoLinqpadDriver;
+
+namespace LINQPad.User
+{
+
+	public class TypedDataContext
+	{
+		private readonly IMongoSession _session;
+		
+		public TypedDataContext(IMongoSession session)
+		{
+			_session = session;
+		}
+		
+		public IQueryable<MongoLinqTest.MongoEntity.TestData> DifferentTestData { get { return _session.AsQuerable<MongoLinqTest.MongoEntity.TestData>("DifferentTestData"); } }
+		public IQueryable<MongoLinqTest.MongoEntity.TestData> TestData { get { return _session.AsQuerable<MongoLinqTest.MongoEntity.TestData>("TestData"); } }
+	}
+}
