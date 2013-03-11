@@ -7,7 +7,7 @@
 using System.Linq;
 using MongoUtils;
 using MongoLinqpadDriver;
-
+using MongoDB.Driver;
 namespace <#= _nameSpace #>
 {
 
@@ -28,7 +28,7 @@ namespace <#= _nameSpace #>
 			var collectionName = typeAndCollectionName.Item2;
 #>
 		public IQueryable<<#= type.FullName#>> <#= collectionName #> { get { return _session.AsQuerable<<#= type.FullName #>>("<#= collectionName #>"); } }
-
+		public MongoCollection<<#= type.FullName#>> <#= collectionName #>MongoCollection { get { return _session.GetCollection<<#= type.FullName #>>("<#= collectionName #>"); } }
 <#
 		}
 #>

@@ -18,7 +18,7 @@ namespace MongoLinqpadDriver
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Users\kevin_wright\Documents\Visual Studio 2012\Projects\MongoLinqpadDriver\MongoLinqpadDriver\MongoContext.tt"
+    #line 1 "C:\Users\chet_husk\Documents\Code\ITU_Gaze_Tracker\MongoLinqpadDriver\MongoLinqpadDriver\MongoContext.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "11.0.0.0")]
     public partial class MongoContext : MongoContextBase
     {
@@ -28,30 +28,31 @@ namespace MongoLinqpadDriver
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("\r\nusing System.Linq;\r\nusing MongoUtils;\r\nusing MongoLinqpadDriver;\r\n\r\nnamespace ");
+            this.Write("\r\nusing System.Linq;\r\nusing MongoUtils;\r\nusing MongoLinqpadDriver;\r\nusing MongoDB" +
+                    ".Driver;\r\nnamespace ");
             
-            #line 11 "C:\Users\kevin_wright\Documents\Visual Studio 2012\Projects\MongoLinqpadDriver\MongoLinqpadDriver\MongoContext.tt"
+            #line 11 "C:\Users\chet_husk\Documents\Code\ITU_Gaze_Tracker\MongoLinqpadDriver\MongoLinqpadDriver\MongoContext.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_nameSpace));
             
             #line default
             #line hidden
             this.Write("\r\n{\r\n\r\n\tpublic class ");
             
-            #line 14 "C:\Users\kevin_wright\Documents\Visual Studio 2012\Projects\MongoLinqpadDriver\MongoLinqpadDriver\MongoContext.tt"
+            #line 14 "C:\Users\chet_husk\Documents\Code\ITU_Gaze_Tracker\MongoLinqpadDriver\MongoLinqpadDriver\MongoContext.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_typeName));
             
             #line default
             #line hidden
             this.Write("\r\n\t{\r\n\t\tprivate readonly IMongoSession _session;\r\n\r\n\t\tpublic ");
             
-            #line 18 "C:\Users\kevin_wright\Documents\Visual Studio 2012\Projects\MongoLinqpadDriver\MongoLinqpadDriver\MongoContext.tt"
+            #line 18 "C:\Users\chet_husk\Documents\Code\ITU_Gaze_Tracker\MongoLinqpadDriver\MongoLinqpadDriver\MongoContext.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(_typeName));
             
             #line default
             #line hidden
             this.Write("(IMongoSession session)\r\n\t\t{\r\n\t\t\t_session = session;\r\n\t\t}\r\n\r\n");
             
-            #line 23 "C:\Users\kevin_wright\Documents\Visual Studio 2012\Projects\MongoLinqpadDriver\MongoLinqpadDriver\MongoContext.tt"
+            #line 23 "C:\Users\chet_husk\Documents\Code\ITU_Gaze_Tracker\MongoLinqpadDriver\MongoLinqpadDriver\MongoContext.tt"
 
 		for (int i = 0; i < _entityTypes.Count(); i++)
 		{
@@ -64,35 +65,63 @@ namespace MongoLinqpadDriver
             #line hidden
             this.Write("\t\tpublic IQueryable<");
             
-            #line 30 "C:\Users\kevin_wright\Documents\Visual Studio 2012\Projects\MongoLinqpadDriver\MongoLinqpadDriver\MongoContext.tt"
+            #line 30 "C:\Users\chet_husk\Documents\Code\ITU_Gaze_Tracker\MongoLinqpadDriver\MongoLinqpadDriver\MongoContext.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(type.FullName));
             
             #line default
             #line hidden
             this.Write("> ");
             
-            #line 30 "C:\Users\kevin_wright\Documents\Visual Studio 2012\Projects\MongoLinqpadDriver\MongoLinqpadDriver\MongoContext.tt"
+            #line 30 "C:\Users\chet_husk\Documents\Code\ITU_Gaze_Tracker\MongoLinqpadDriver\MongoLinqpadDriver\MongoContext.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(collectionName));
             
             #line default
             #line hidden
             this.Write(" { get { return _session.AsQuerable<");
             
-            #line 30 "C:\Users\kevin_wright\Documents\Visual Studio 2012\Projects\MongoLinqpadDriver\MongoLinqpadDriver\MongoContext.tt"
+            #line 30 "C:\Users\chet_husk\Documents\Code\ITU_Gaze_Tracker\MongoLinqpadDriver\MongoLinqpadDriver\MongoContext.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(type.FullName));
             
             #line default
             #line hidden
             this.Write(">(\"");
             
-            #line 30 "C:\Users\kevin_wright\Documents\Visual Studio 2012\Projects\MongoLinqpadDriver\MongoLinqpadDriver\MongoContext.tt"
+            #line 30 "C:\Users\chet_husk\Documents\Code\ITU_Gaze_Tracker\MongoLinqpadDriver\MongoLinqpadDriver\MongoContext.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(collectionName));
             
             #line default
             #line hidden
-            this.Write("\"); } }\r\n\r\n");
+            this.Write("\"); } }\r\n\t\tpublic MongoCollection<");
             
-            #line 32 "C:\Users\kevin_wright\Documents\Visual Studio 2012\Projects\MongoLinqpadDriver\MongoLinqpadDriver\MongoContext.tt"
+            #line 31 "C:\Users\chet_husk\Documents\Code\ITU_Gaze_Tracker\MongoLinqpadDriver\MongoLinqpadDriver\MongoContext.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(type.FullName));
+            
+            #line default
+            #line hidden
+            this.Write("> ");
+            
+            #line 31 "C:\Users\chet_husk\Documents\Code\ITU_Gaze_Tracker\MongoLinqpadDriver\MongoLinqpadDriver\MongoContext.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(collectionName));
+            
+            #line default
+            #line hidden
+            this.Write("MongoCollection { get { return _session.GetCollection<");
+            
+            #line 31 "C:\Users\chet_husk\Documents\Code\ITU_Gaze_Tracker\MongoLinqpadDriver\MongoLinqpadDriver\MongoContext.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(type.FullName));
+            
+            #line default
+            #line hidden
+            this.Write(">(\"");
+            
+            #line 31 "C:\Users\chet_husk\Documents\Code\ITU_Gaze_Tracker\MongoLinqpadDriver\MongoLinqpadDriver\MongoContext.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(collectionName));
+            
+            #line default
+            #line hidden
+            this.Write("\"); } }\r\n");
+            
+            #line 32 "C:\Users\chet_husk\Documents\Code\ITU_Gaze_Tracker\MongoLinqpadDriver\MongoLinqpadDriver\MongoContext.tt"
 
 		}
 

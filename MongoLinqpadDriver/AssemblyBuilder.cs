@@ -226,6 +226,8 @@ namespace MongoLinqpadDriver
 			assemblyNames.Add(_mongoProps.EntityAssemblyPath);
 			assemblyNames.Add(Path.Combine(_driverFolder, "MongoUtils.dll"));   /// TODO - uncomment this and see errors
 			assemblyNames.Add(Path.Combine(_driverFolder, "MongoLinqpadDriver.dll"));
+            assemblyNames.Add(Path.Combine(_driverFolder, "MongoDB.Driver.dll"));
+            assemblyNames.Add(Path.Combine(_driverFolder, "MongoDB.Bson.dll"));
 
 			var providerOptions = new Dictionary<string, string> { { "CompilerVersion", "v4.0" } };
 			using (var provider = new CSharpCodeProvider(providerOptions))
