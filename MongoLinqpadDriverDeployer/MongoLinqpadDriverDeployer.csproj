@@ -65,7 +65,7 @@
   <ItemGroup>
     <Content Include="Libs\MongoDB.Bson.dll" />
     <Content Include="Libs\MongoDB.Bson.pdb" />
-    <Content Include="Libs\MongoDB.Bson.xml" />
+    <Content Include="Libs\MongoDB.Bson.XML" />
     <Content Include="Libs\MongoDB.Driver.dll" />
     <Content Include="Libs\MongoDB.Driver.pdb" />
     <Content Include="Libs\MongoDB.Driver.XML" />

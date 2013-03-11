@@ -16,10 +16,10 @@ namespace MongoLinqpadDriverDeployer
 			"MongoLinqpadDriver.pdb",
 			"MongoUtils.dll",
 			"MongoUtils.pdb",
-			"..\\..\\Libs\\1_7\\MongoDB.Driver.dll",
-			"..\\..\\Libs\\1_7\\MongoDB.Driver.pdb",
-			"..\\..\\Libs\\1_7\\MongoDB.Bson.dll",
-			"..\\..\\Libs\\1_7\\MongoDB.Bson.pdb",
+			"..\\..\\Libs\\1_7_1\\MongoDB.Driver.dll",
+			"..\\..\\Libs\\1_7_1\\MongoDB.Driver.pdb",
+			"..\\..\\Libs\\1_7_1\\MongoDB.Bson.dll",
+			"..\\..\\Libs\\1_7_1\\MongoDB.Bson.pdb",
         };
 
         private static void Main(string[] args)
